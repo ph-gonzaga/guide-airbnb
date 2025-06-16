@@ -13,11 +13,6 @@
 
     <main>
 
-        <section class="welcome">
-            <h1>Bem-vindo!</h1>
-            <p>Seu guia durante sua estadia.</p>
-        </section>
-
         <nav class="menu-container">
             <a class="menu-btn" href="#checkin">Sobre</a>
             <a class="menu-btn" href="#checkin">Check-In / Check-Out</a>
@@ -55,6 +50,7 @@
             <div class="checkin-bg">
                 <div class="checkin-shape checkin-shape-bottom"></div>
                 <img src="assets/cozinha.png" alt="Cozinha" class="checkin-img">
+                <div class="checkin-blur-overlay"></div>
                 <div class="checkin-cards">
                     <div class="checkin-card">
                         <span class="checkin-title">Checkin</span><br>
@@ -67,6 +63,168 @@
                 </div>
             </div>
         </section>
+
+        <section class="comodidades-section">
+            <h2>Comodidades</h2>
+            <div class="comodidades-grid">
+          
+              <div class="comodidade-card">
+                <img src="assets/icons/tv.png" alt="TV Streaming e Alexa" class="comodidade-icon">
+                <p>TV Streaming<br>Música - Alexa</p>
+                
+                <img src="assets/icons/livro.png" alt="Livros e Gêneros" class="comodidade-icon">
+                <p>Livros<br>Finanças<br>Aventura<br>Motivacional</p>
+              </div>
+          
+              <div class="comodidade-card">
+                <img src="assets/icons/wifi.png" alt="Internet Wi-Fi" class="comodidade-icon">
+                <p>Wi-Fi - 1 GIGA</p>
+                
+                <img src="assets/icons/cafe.png" alt="Utensílios de Cozinha" class="comodidade-icon">
+                <p>Purificador de Água<br>Liquidificador<br>Sanduicheira<br>Cafeteira</p>
+              </div>
+          
+              <div class="comodidade-card">
+                <img src="assets/icons/banheiro.png" alt="Itens de Banheiro" class="comodidade-icon">
+                <p>Toalhas de Banho<br>Shampoo / Sabonete</p>
+                
+                <img src="assets/icons/ar-condicionado.png" alt="Ar Condicionado" class="comodidade-icon">
+                <p>Ar Condicionado</p>
+              </div>
+          
+            </div>
+          </section>
+          
+          
+          <section class="locais-section">
+            <h2>Locais Úteis</h2>
+          
+            <!-- 🛒 Mercados e Conveniência -->
+            <h3>Mercados e Conveniência</h3>
+            <div class="locais-grid">
+           
+          
+              <div class="local-card">
+                <img class="local-img" src="assets/places/minuto.png" alt="Imagem Mercado (placeholder)">
+                <div class="local-info">
+                  <p><strong>Minuto Pão de Açúcar</strong></p>
+                  <p>Distância: 800 m (~3 min de carro / 10 min a pé)</p>
+                  <p><a href="https://www.google.com/maps/dir/Rua+Laguna,+São+Paulo/Minuto+Pão+de+Açúcar+-+Av.+Professor+Alceu+Maynard+Araújo+-+Vila+Cruzeiro,+São+Paulo+-+SP,+04726-160" target="_blank">Ver no Maps</a></p>
+                </div>
+              </div>
+              
+          
+              <div class="local-card">
+                <img class="local-img" src="assets/places/carrefour.png" alt="Imagem Carrefour (placeholder)">
+                <div class="local-info">
+                  <p><strong>Hiper Carrefour Marginal Pinheiros</strong></p>
+                  <p>Distância: 3,2 km (~8 min de carro)</p>
+                  <p><a href="https://www.google.com/maps/dir/Rua+Laguna,+São+Paulo/Carrefour+Marginal+Pinheiros" target="_blank">Ver no Maps</a></p>
+                </div>
+              </div>
+            </div>
+          
+            <!-- 🚆 Transporte Público -->
+            <h3>Transporte Público</h3>
+            <div class="locais-grid">
+                <div class="local-card">
+                    <img class="local-img" src="assets/places/joao-dias.png" alt="Estação João Dias (placeholder)">
+                    <div class="local-info">
+                      <p><strong>Estação CPTM João Dias</strong></p>
+                      <p>Distância: 1,3 km (~4 min de carro / 12 min a pé)</p>
+                      <p><a href="https://www.google.com/maps/dir/Rua+Laguna,+São+Paulo/Estação+CPTM+João+Dias" target="_blank">Ver no Maps</a></p>
+                    </div>
+             </div>
+              <div class="local-card">
+                <img class="local-img" src="assets/places/metro.jpg" alt="Entrada da Estação Alto da Boa Vista">
+                <div class="local-info">
+                  <p><strong>Estação de Metrô Alto da Boa Vista</strong></p>
+                  <p>Distância: 4 km (~12 min de carro)</p>
+                  <p><a href="https://www.google.com/maps/dir/Rua+Laguna,+São+Paulo/Estação+Metrô+Alto+da+Boa+Vista" target="_blank">Ver no Maps</a></p>
+                </div>
+              </div>
+          
+            </div>
+          
+          
+            <!-- 🏬 Shoppings e Compras -->
+            <h3>Shoppings e Compras</h3>
+            <div class="locais-grid">
+              <div class="local-card">
+                <img class="local-img" src="assets/places/parque-cidade.jpg" alt="Shopping Parque da Cidade (placeholder: use imagem real)">
+                <div class="local-info">
+                  <p><strong>Shopping Parque da Cidade</strong></p>
+                  <p>Distância: 2,5 km (~7 min de carro)</p>
+                  <p><a href="https://www.google.com/maps/dir/Rua+Laguna,+São+Paulo/Shopping+Parque+da+Cidade" target="_blank">Ver no Maps</a></p>
+                </div>
+              </div>
+
+              <div class="local-card">
+                <img class="local-img" src="assets/places/morumbi.png" alt="Fachada do Shopping Morumbi">
+                <div class="local-info">
+                  <p><strong>Shopping Morumbi</strong></p>
+                  <p>Distância: 4,2 km (~10 min de carro)</p>
+                  <p><a href="https://www.google.com/maps/dir/Rua+Laguna,+São+Paulo/Shopping+Morumbi" target="_blank">Ver no Maps</a></p>
+                </div>
+              </div>
+
+              <div class="local-card">
+                <img class="local-img" src="assets/places/nestle.png" alt="Prédio da Nestlé (placeholder)">
+                <div class="local-info">
+                  <p><strong>Empório Nestle & Praça de Alimentação</strong></p>
+                  <p>Distância: 1,3 km (~4 min de carro / 12 min a pé)</p>
+                  <p><a href="https://www.google.com/maps/dir/Rua+Laguna,+São+Paulo/Nestlé+São+Paulo" target="_blank">Ver no Maps</a></p>
+                </div>
+              </div>
+            </div>
+          
+            <!-- 🎭 Eventos e Cultura -->
+            <h3>Eventos e Cultura</h3>
+            <div class="locais-grid">
+              <div class="local-card">
+                <img class="local-img" src="assets/places/tokio.png" alt="Tokio Marine Hall (placeholder)">
+                <div class="local-info">
+                  <p><strong>Tokio Marine Hall</strong></p>
+                  <p>Distância: 500m (~5 min a pé)</p>
+                  <p><a href="https://www.google.com/maps/dir/Rua+Laguna,+São+Paulo/Tokio+Marine+Hall" target="_blank">Ver no Maps</a></p>
+                </div>
+              </div>
+
+              <div class="local-card">
+                <img class="local-img" src="assets/places/expo-center.png" alt="Transamerica Expo Center (placeholder)">
+                <div class="local-info">
+                  <p><strong>Transamerica Expo Center</strong></p>
+                  <p>Distância: 5,1 km (~11 min de carro)</p>
+                  <p><a href="https://www.google.com/maps/dir/Rua+Laguna,+São+Paulo/Transamerica+Expo+Center" target="_blank">Ver no Maps</a></p>
+                </div>
+              </div>
+          
+              <div class="local-card">
+                <img class="local-img" src="assets/places/lolla.png" alt="Autódromo Interlagos vista aérea">
+                <div class="local-info">
+                  <p><strong>Autódromo de Interlagos</strong></p>
+                  <p>Distância: 7,6 km (~15 min de carro)</p>
+                  <p><a href="https://www.google.com/maps/dir/Rua+Laguna,+São+Paulo/Autódromo+de+Interlagos" target="_blank">Ver no Maps</a></p>
+                </div>
+              </div>
+            </div>
+          
+            <!-- 🏛️ Serviços Institucionais -->
+            <h3>Serviços Institucionais</h3>
+            <div class="locais-grid">
+              <div class="local-card">
+                <img class="local-img" src="assets/places/visa.png" alt="Fachada Consulado Americano São Paulo">
+                <div class="local-info">
+                  <p><strong>Consulado Americano</strong></p>
+                  <p>Distância: 4,4 km (~10 min de carro)</p>
+                  <p><a href="https://www.google.com/maps/dir/Rua+Laguna,+São+Paulo/Consulado+Americano+SP" target="_blank">Ver no Maps</a></p>
+                </div>
+              </div>
+            </div>
+          
+          </section>
+          
+          
 
         <section id="checkin">
             <h2>Check-In / Check-Out</h2>
@@ -83,15 +241,6 @@
             <p>Informações sobre vaga e alternativas...</p>
         </section>
 
-        <section id="locais">
-            <h2>Locais Úteis</h2>
-            <ul>
-                <li>Shoppings</li>
-                <li>Restaurantes</li>
-                <li>Eventos</li>
-                <li>Consulados</li>
-            </ul>
-        </section>
 
         <section id="faq">
             <h2>Perguntas Frequentes</h2>

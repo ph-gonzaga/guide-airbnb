@@ -8,7 +8,7 @@
 :root {
     --primary: #A75D3D;
     --secondary: #3F6D55;
-    --background: #FDF7F0;
+    --background: #fff9ef;
     --text: #333;
 }
 
@@ -21,7 +21,7 @@ body {
 }
 
 header {
-    background-color: var(--primary);
+    background-color: var(--background);
     text-align: center;
     padding: 1rem;
 }
@@ -80,7 +80,7 @@ footer {
 }
 
 .menu-btn {
-    background: #f5f3f2;
+    background: linear-gradient(135deg, #f9f5f2 0%, rgba(208, 138, 106, 0.08) 50%, rgba(109, 126, 107, 0.08) 100%);
     color: #d08a6a;
     border: none;
     border-radius: 16px;
@@ -310,3 +310,159 @@ footer {
     }
   }
   
+  .checkin-blur-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* abaixo dos cards, acima da imagem */
+    pointer-events: none;
+    backdrop-filter: blur(4px); /* ajuste o valor conforme desejar */
+    /* fallback para navegadores antigos */
+    background: rgba(255,255,255,0.08);
+}
+.checkin-img {
+  z-index: 0;
+  position: relative;
+}
+.checkin-cards {
+  z-index: 2;
+  position: absolute;
+  /* ...restante do seu CSS... */
+}
+  
+/* ===== Section Geral ===== */
+.comodidades-section {
+  padding: 40px 16px;
+  background: #fdfaf7;
+}
+
+.comodidades-section h2 {
+  font-size: 2rem;
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+
+
+/* ===== Grid ===== */
+.comodidades-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+/* ===== Card Individual ===== */
+.comodidade-card {
+  border-radius: 16px;
+  background: linear-gradient(135deg, #f9f5f2 0%, rgba(208, 138, 106, 0.08) 50%, rgba(109, 126, 107, 0.08) 100%);
+  padding: 24px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+/* ===== Ícones ===== */
+.comodidade-icon {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+/* ===== Texto ===== */
+.comodidade-card p {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0;
+  text-align: center;
+  color: #3a5b28;
+}
+
+/* ===== Responsivo Mobile ===== */
+@media (max-width: 600px) {
+  .comodidades-grid {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .comodidade-card {
+    width: 100%;
+  }
+}
+
+
+.locais-section {
+  background: #FDF7F0;
+  padding: 48px 16px;
+}
+
+.locais-section h2 {
+  font-size: 2rem;
+  color: #111;
+  margin-bottom: 32px;
+}
+
+.locais-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.local-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.local-icon {
+  width: 72px;
+  height: 72px;
+  background: #ddd;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.local-info p {
+  margin: 4px 0;
+  color: #111;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.local-info a {
+  color: #111;
+  text-decoration: underline;
+}
+
+.local-info a:hover {
+  text-decoration: none;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .locais-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .local-card {
+    align-items: center;
+  }
+}
+
+.local-img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+  background: #eee;
+  display: block;
+}

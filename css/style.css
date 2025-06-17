@@ -147,13 +147,20 @@ footer {
   padding-left: 20px;
   margin-bottom: 16px;
 }
-.sobre-profile {
+.perfil-card {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin-top: 48px;
+  align-items: center;
 }
-.sobre-img {
+
+.perfil-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.perfil-img {
   width: 220px;
   height: 180px;
   object-fit: cover;
@@ -161,80 +168,49 @@ footer {
   margin-bottom: 12px;
 }
 
-.sobre-img-co {
+.perfil-img-co {
   width: 120px;
-  height: 80px;
+  height: 120px;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 18px;
   margin-bottom: 12px;
 }
 
-.sobre-img-decor {
-  width: 70px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 20px;
-  margin-top: 12px;
-  margin-bottom: 22px;
-  background-color: #2f5e2f;
+.perfil-info {
+  text-align: center;
 }
-.sobre-info {
-  font-size: 1.2rem;
-  color: #3f6d55;
-  font-weight: 500;
+
+.perfil-decor {
+  width: 80px;
+  height: 80px;
+  background: #3F6D55;
+  border-radius: 24px;
 }
-.sobre-nome {
+
+.perfil-nome {
   font-size: 1.4rem;
-  color: #3f6d55;
+  color: #3F6D55;
   font-weight: 600;
 }
-.sobre-cargo {
+
+.perfil-cargo {
   color: #888;
   font-size: 1.1rem;
 }
-.sobre-insta {
+
+.perfil-insta {
+  text-decoration: none;
+  color: #3F6D55;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  color: #d08a6a;
-  border-radius: 20px;
-  padding: 7px 18px 7px 12px;
-  font-weight: 600;
-  font-size: 1rem;
-  text-decoration: none !important;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    border 0.2s;
-  margin-top: 10px;
-  line-height: 1;
+  gap: 6px;
 }
 
-.sobre-insta-icone {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.sobre-insta:hover,
-.sobre-insta:focus {
-  border-color: #62157c;
-  text-decoration: none;
-}
-
-.sobre-insta:hover .sobre-insta-icone rect,
-.sobre-insta:hover .sobre-insta-icone circle {
-  stroke: #edc0c0;
+.perfil-insta-icone {
+  stroke: #D08A6A;
   fill: none;
 }
 
-.sobre-insta:hover .sobre-insta-icone circle:last-child {
-  fill: #fff;
-}
-
-.sobre-card li {
-  margin-bottom: 8px;
-}
 /* ===== Layout Desktop ===== */
 .checkin-section {
   width: 100vw;
@@ -541,7 +517,8 @@ footer {
 
 .local-info a {
   color: #a75d3d;
-  text-decoration: underline;
+  text-decoration: none;
+
 }
 
 .local-info a:hover {
@@ -972,11 +949,6 @@ footer {
   justify-content: space-between;
   transition: transform 0.3s ease;
 }
-
-.estacionamento-card:hover {
-  transform: translateY(-4px);
-}
-
 /* TÍTULO DO CARD */
 .estacionamento-card h3 {
   font-size: 1.2rem;
@@ -1012,10 +984,6 @@ footer {
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: border-color 0.2s;
-}
-
-.estacionamento-card a:hover {
-  border-color: #d08a6a;
 }
 
 /* Ajuste no grid para mobile */

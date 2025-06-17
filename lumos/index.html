@@ -14,16 +14,15 @@
     <main>
 
         <nav class="menu-container">
-            <a class="menu-btn" href="#checkin">Sobre</a>
+            <a class="menu-btn" href="#sobre">Sobre</a>
             <a class="menu-btn" href="#checkin">Check-In / Check-Out</a>
-            <a class="menu-btn" href="#checkin">Comodidades</a>
-            <a class="menu-btn" href="#regras">Regras</a>
             <a class="menu-btn" href="#estacionamento">Estacionamento</a>
+            <a class="menu-btn" href="#comodidades">Comodidades</a>
+            <a class="menu-btn" href="#regras">Regras</a>
             <a class="menu-btn" href="#locais">Locais Úteis</a>
-            <a class="menu-btn" href="#faq">FAQ</a>
         </nav>
 
-        <section class="sobre-section">
+        <section id="sobre" class="sobre-section">
             <div class="sobre-card">
                 <h2>Sobre</h2>
                 <p>Ficamos felizes em recebê-lo!<br>
@@ -37,16 +36,34 @@
                 </ul>
             </div>
             <div class="sobre-profile">
+                
                 <img src="assets/bruna.png" alt="Bruna Erre" class="sobre-img">
                 <div class="sobre-info">
                     <span class="sobre-nome">Bruna Erre</span><br>
-                    <span class="sobre-cargo">Arquiteta</span><br>
-                    <a href="#" class="sobre-insta">Intagram</a>
+                    <span class="sobre-cargo">Arquiteta</span><br>              
                 </div>
+                <a href="https://instagram.com/SEU_USUARIO" class="sobre-insta" target="_blank" rel="noopener">
+                    <svg class="sobre-insta-icone" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                      <rect x="2" y="2" width="20" height="20" rx="6" stroke="#fff" stroke-width="2" fill="none"/>
+                      <circle cx="12" cy="12" r="5" stroke="#fff" stroke-width="2" fill="none"/>
+                      <circle cx="17" cy="7" r="1.2" fill="#fff"/>
+                    </svg>
+                    Instagram
+                  </a>  
             </div>
+
+            <div class="sobre-profile-co">   
+                <img src="assets/bruna.png" alt="Bruna Erre" class="sobre-img-co">
+                <div class="sobre-info">
+                    <span class="sobre-nome">Alex Moreira</span><br>
+                    <span class="sobre-cargo">Co-Anfitrião</span><br>              
+                </div> 
+                <div class="sobre-img-decor"></div>
+            </div>
+            
         </section>
 
-        <section class="checkin-section">
+        <section id="checkin" class="checkin-section">
             <div class="checkin-bg">
                 <div class="checkin-shape checkin-shape-bottom"></div>
                 <img src="assets/cozinha.png" alt="Cozinha" class="checkin-img">
@@ -57,14 +74,74 @@
                         <span class="checkin-info">A partir das 14h</span>
                     </div>
                     <div class="checkin-card">
-                        <span class="checkin-title">Checkin</span><br>
-                        <span class="checkin-info">A partir das 14h</span>
+                        <span class="checkin-title">Checkout</span><br>
+                        <span class="checkin-info">Até 11h</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="comodidades-section">
+        <section id="faq" class="faq-section">
+            <h2>Perguntas Frequentes</h2>
+          
+            <div class="faq-item">
+              <h3>🛂 Preciso enviar algum documento para a portaria?</h3>
+              <p>Sim. Por exigência do condomínio, é necessário enviar um documento com foto de todos os hóspedes da reserva (RG, CNH ou passaporte) para liberar o acesso ao prédio.</p>
+            </div>
+          
+            <div class="faq-item">
+              <h3>🔒 Qual a senha da porta?</h3>
+              <p>A senha será enviada no dia do check-in, entre 12h e 14h, por mensagem no Airbnb. Isso é feito por motivos de segurança.</p>
+            </div>
+          
+            <div class="faq-item">
+              <h3>📍 Onde fica o endereço completo?</h3>
+              <p>Você pode visualizar o endereço completo na aba "Viagem" do aplicativo do Airbnb, logo após a reserva ser confirmada.</p>
+            </div>
+          
+            <div class="faq-item">
+              <h3>🕒 Posso fazer check-in antes do horário?</h3>
+              <p>O check-in começa a partir das 15h. Caso precise chegar antes, entre em contato para verificarmos a disponibilidade.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>🎒 Posso deixar minhas malas antes do check-in?</h3>
+                <p>Infelizmente, não possuímos maleiro no local. O prédio não oferece espaço para armazenamento de bagagens.</p>
+            </div>
+
+        </section>
+
+        <section id="estacionamento" class="estacionamento-section">
+            <h2>Estacionamento</h2>
+
+            <div class="estacionamento-grid">
+                <p>O apartamento não possui vaga de garagem, pois todas as vagas do condomínio são exclusivas dos moradores.</p>
+
+              <!-- Card Lava Rápido -->
+              <div class="estacionamento-card">
+                <h3>🅿️ Estacionamento Pago – Lava Rápido do Antônio</h3>
+                <p>✔️ Estacionamento pago<br>
+                   ✔️ Lava rápido<br>
+                   📍 <strong>R. Carmo do Rio Verde, 152 – Jardim Caravelas, SP</strong>
+                </p>
+                <a href="https://www.google.com/maps/place/R.+Carmo+do+Rio+Verde,+152+-+Jardim+Caravelas,+S%C3%A3o+Paulo+-+SP,+04729-010/" target="_blank">
+                  Ver no Google Maps
+                </a>
+              </div>
+          
+              <!-- Card Rua Livre -->
+              <div class="estacionamento-card">
+                <h3>🚗 Estacionamento na Rua</h3>
+                <p>✔️ Estacionamento livre na ruas laterais do condomínio<br>
+                   ✔️ Sem restrições municipais<br>
+                   ✔️ Permitido durante o dia e à noite
+                </p>
+              </div>
+          
+            </div>
+          </section>
+
+        <section id="comodidades" class="comodidades-section">
             <h2>Comodidades</h2>
             <div class="comodidades-grid">
           
@@ -94,9 +171,111 @@
           
             </div>
           </section>
+
+
+
+          <section id="condominio-comodidades" class="condominio-comodidades">
+            <h2>Comodidades do Condomínio</h2>
           
+            <div class="comodidades-condominio-grid">
           
-          <section class="locais-section">
+              <div class="comodidade-condominio-card">
+                <div><img class="comodidade-condominio-img" src="assets/condominio/mercadinho.jpg" alt="Imagem mercadinho condominio (placeholder)">
+                </div>    
+                <div class="comodidade-condominio-info">
+                  <h3>🛍️ Mercadinho 24h</h3>
+                  <p>Localizado no térreo, em frente à quadra.</p>
+                  <p>Aberto 24 horas para sua conveniência.</p>
+                </div>
+              </div>
+          
+              <div class="comodidade-condominio-card">
+                <div><img class="comodidade-condominio-img" src="assets/condominio/feira.jpg" alt="Imagem feira noturna (placeholder)">
+                </div>
+                <div class="comodidade-condominio-info">
+                  <h3>🥟 Feira Noturna</h3>
+                  <p><strong>Quando:</strong> Segunda-feira, das 19h às 23h.</p>
+                  <p><strong>O que você encontra:</strong></p>
+                  <ul>
+                    <li>🥟 Pastel</li>
+                    <li>🥤 Caldo de Cana</li>
+                    <li>🥬 Frutas e Verduras Frescas</li>
+                  </ul>
+                  <p><strong>Localização:</strong> Térreo, próximo à quadra e parquinho.</p>
+                </div>
+              </div>
+          
+            </div>
+          </section>
+          
+ 
+          <section id="regras" class="condominio-section">
+            <h2>Regras do Condomínio</h2>
+            <div class="condominio-regras">
+          
+              <!-- Bloco para reservas até 30 dias -->
+              <div class="regra-card">
+                <h3>🗓️ Reservas de até 30 dias</h3>
+                <p>Durante estadias com duração inferior a 30 dias, o acesso está <strong>limitado ao apartamento</strong>.</p>
+                <p>O uso das <strong>áreas comuns</strong> (como academia, salão de festas e demais espaços) <strong>não é permitido</strong>, conforme as normas internas do condomínio.</p>
+              </div>
+          
+              <!-- Bloco para reservas acima de 30 dias -->
+              <div class="regra-card">
+                <h3>🗓️ Reservas acima de 30 dias</h3>
+                <p>Durante estadias superiores a 30 dias, você poderá utilizar as <strong>áreas comuns</strong>, como:</p>
+                <ul>
+                  <li>🏋️ Academia</li>
+                  <li>📖 Sala de estudos</li>
+                  <li>🎯 Espaços de lazer compartilhados</li>
+                </ul>
+                <p>⚠️ É indispensável <strong>seguir as normas internas</strong> do condomínio para garantir uma boa convivência.</p>
+              </div>
+          
+            </div>
+          </section>
+
+          <section class="apartamento-section">
+            <h2>Regras do Apartamento</h2>
+            <div class="apartamento-regras-grid">
+          
+              <div class="regra-card">
+                <div class="regra-icon">🔇</div>
+                <h3>Horário de Silêncio</h3>
+                <p>Das <strong>22h às 8h</strong>, mantenha silêncio absoluto para respeitar os vizinhos.</p>
+              </div>
+          
+              <div class="regra-card">
+                <div class="regra-icon">🎉</div>
+                <h3>Festas e Eventos</h3>
+                <p><strong>Não são permitidos</strong> dentro do apartamento nem nas áreas comuns.</p>
+              </div>
+          
+              <div class="regra-card">
+                <div class="regra-icon">🐶</div>
+                <h3>Animais de Estimação</h3>
+                <p><strong>Não é permitido</strong> trazer animais durante a estadia.</p>
+              </div>
+          
+              <div class="regra-card">
+                <div class="regra-icon">🚭</div>
+                <h3>Fumar</h3>
+                <p><strong>Proibido fumar</strong> dentro do apartamento em qualquer circunstância.</p>
+              </div>
+          
+              <div class="regra-card">
+                <div class="regra-icon">🚫</div>
+                <h3>Visitas</h3>
+                <p><strong>Não é permitido</strong> receber visitas durante sua estadia.</p>
+              </div>
+          
+            </div>
+          </section>
+
+ 
+          
+
+          <section id="locais" class="locais-section">
             <h2>Locais Úteis</h2>
           
             <!-- 🛒 Mercados e Conveniência -->
@@ -223,34 +402,21 @@
             </div>
           
           </section>
+
           
-          
 
-        <section id="checkin">
-            <h2>Check-In / Check-Out</h2>
-            <p>Horários e instruções...</p>
-        </section>
-
-        <section id="regras">
-            <h2>Regras do Imóvel e Condomínio</h2>
-            <p>...</p>
-        </section>
-
-        <section id="estacionamento">
-            <h2>Estacionamento</h2>
-            <p>Informações sobre vaga e alternativas...</p>
-        </section>
-
-
-        <section id="faq">
-            <h2>Perguntas Frequentes</h2>
-            <p>...</p>
-        </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Lumos</p>
+        <p>&copy; 2025 Lumos - Guia de Hospedagem</p>
     </footer>
+
+    <button id="btn-topo" class="btn-topo" aria-label="Voltar ao topo">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="12" fill="#3F6D55"/>
+          <path d="M8 14l4-4 4 4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
 
     <script src="js/script.js"></script>
 </body>

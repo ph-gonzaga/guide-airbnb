@@ -8,7 +8,7 @@
 :root {
     --primary: #A75D3D;
     --secondary: #3F6D55;
-    --background: #fff9ef;
+    --background: linear-gradient(135deg, #f9f5f2 0%, rgba(208, 138, 106, 0.08) 50%, rgba(109, 126, 107, 0.08) 100%);
     --text: #333;
 }
 
@@ -16,7 +16,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Gotham', Arial, sans-serif;
-    background-color: var(--background);
+    background: linear-gradient(135deg, #f9f5f2 0%, rgba(208, 138, 106, 0.08) 50%, rgba(109, 126, 107, 0.08) 100%);
     color: var(--text);
 }
 
@@ -122,9 +122,13 @@ footer {
   margin-bottom: 16px;
   font-weight: 700;
 }
+.sobre-card p {
+  margin-bottom: 16px;
+}
 .sobre-card ul {
   margin-top: 16px;
   padding-left: 20px;
+  margin-bottom: 16px;
 }
 .sobre-profile {
   display: flex;
@@ -138,6 +142,25 @@ footer {
   object-fit: cover;
   border-radius: 20px;
   margin-bottom: 12px;
+}
+
+.sobre-img-co {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+
+.sobre-img-decor {
+  width: 70px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-top: 12px;
+  background-color: #2f5e2f;
+
 }
 .sobre-info {
   font-size: 1.2rem;
@@ -154,15 +177,47 @@ footer {
   font-size: 1.1rem;
 }
 .sobre-insta {
-  color: #d08a6a;
-  text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: 500;
-  margin-top: 8px;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #fdfaf7;
+  background-color: #3F6D55;
+  border-radius: 20px;
+  padding: 7px 18px 7px 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none !important;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  margin-top: 10px;
+  line-height: 1;
 }
-.sobre-insta:hover {
-  text-decoration: underline;
+
+.sobre-insta-icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sobre-insta:hover,
+.sobre-insta:focus {
+  background: #d08a6a;
+  color: #fff;
+  border-color: #d08a6a;
+  text-decoration: none;
+}
+
+.sobre-insta:hover .sobre-insta-icone rect,
+.sobre-insta:hover .sobre-insta-icone circle {
+  stroke: #fff;
+  fill: none;
+}
+
+.sobre-insta:hover .sobre-insta-icone circle:last-child {
+  fill: #fff;
+}
+
+.sobre-card li {
+  margin-bottom: 8px;
 }
 /* ===== Layout Desktop ===== */
 .checkin-section {
@@ -340,7 +395,8 @@ footer {
 .comodidades-section h2 {
   font-size: 2rem;
   margin-bottom: 32px;
-  text-align: left;
+  text-align: center;
+  color: #3F6D55;
 }
 
 
@@ -396,14 +452,18 @@ footer {
 
 
 .locais-section {
-  background: #FDF7F0;
+  color: #454545;;
+  max-width: 1100px;
+  margin: 48px auto 0 auto;
   padding: 48px 16px;
+  box-sizing: border-box;
 }
 
 .locais-section h2 {
   font-size: 2rem;
-  color: #111;
+  color: #3F6D55;;
   margin-bottom: 32px;
+  text-align: center;
 }
 
 .locais-grid {
@@ -420,6 +480,14 @@ footer {
   border-radius: 16px;
   padding: 16px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: box-shadow 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+.local-card:hover {
+  box-shadow: 0 8px 24px rgba(109,126,107,0.15), 0 2px 8px rgba(0,0,0,0.08);
+  transform: translateY(-4px) scale(1.025);
+  z-index: 2;
+  color: #3F6D55;
 }
 
 .local-icon {
@@ -432,13 +500,23 @@ footer {
 
 .local-info p {
   margin: 4px 0;
-  color: #111;
+  color: #454545;;
   font-size: 1rem;
   line-height: 1.4;
 }
 
+.local-info p strong {
+  font-size: 1.15rem;
+  color: #2f5e2f;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.3;
+  display: block;
+  margin-bottom: 2px;
+}
+
 .local-info a {
-  color: #111;
+  color: #A75D3D;
   text-decoration: underline;
 }
 
@@ -465,4 +543,481 @@ footer {
   flex-shrink: 0;
   background: #eee;
   display: block;
+}
+
+@media (max-width: 900px) {
+  .locais-section {
+    padding: 32px 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .locais-section {
+    padding: 24px 8px;
+  }
+}
+
+.btn-topo {
+  position: fixed;
+  right: 24px;
+  bottom: 32px;
+  width: 56px;
+  height: 56px;
+  border: none;
+  border-radius: 50%;
+  background: #3F6D55;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background 0.2s, box-shadow 0.2s, opacity 0.2s;
+  opacity: 0.85;
+}
+.btn-topo:hover {
+  background: #2f5e2f;
+  opacity: 1;
+}
+.btn-topo svg {
+  display: block;
+  opacity: 1;
+}
+@media (max-width: 600px) {
+  .btn-topo {
+    right: 12px;
+    bottom: 16px;
+    width: 44px;
+    height: 44px;
+  }
+  .btn-topo svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+
+
+.condominio-section {
+  padding: 56px 16px 48px 16px;
+  max-width: 1100px;
+  margin: 18px auto 0 auto;
+  box-sizing: border-box;
+}
+
+.condominio-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 36px;
+  color: #3F6D55;
+  text-align: center;
+  letter-spacing: 0.01em;
+  font-weight: 700;
+}
+
+.condominio-regras {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.regra-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 32px 28px 28px 28px;
+  position: relative;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+
+.regra-card::before {
+  content: '⚠️';
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  font-size: 1.5rem;
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.regra-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 14px;
+  color: #A75D3D;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.regra-card p {
+  font-size: 1.05rem;
+  color: #454545;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.regra-card ul {
+  margin: 14px 0 0 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.regra-card li {
+  margin-bottom: 7px;
+  color: #3F6D55;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding-left: 0;
+}
+
+@media (max-width: 600px) {
+  .condominio-section {
+    padding: 32px 4vw 24px 4vw;
+    border-radius: 12px;
+  }
+  .condominio-regras {
+    gap: 18px;
+  }
+  .regra-card {
+    padding: 18px 10px 16px 10px;
+    border-radius: 12px;
+  }
+  .regra-card h3 {
+    font-size: 1.08rem;
+    margin-bottom: 8px;
+  }
+  .regra-card p, .regra-card li {
+    font-size: 0.97rem;
+  }
+}
+
+
+.apartamento-section {
+  padding: 64px 16px;
+  background: #E17D59E5
+}
+
+.apartamento-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #fff;
+}
+
+.apartamento-regras-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.regra-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.regra-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+}
+
+.regra-icon {
+  font-size: 2.8rem;
+  margin-bottom: 16px;
+  color: #6c795f;
+}
+
+.regra-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.regra-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .apartamento-section h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Seção */
+
+.condominio-comodidades {
+  padding: 64px 16px;
+  background-color: #3f6650;
+}
+
+.condominio-comodidades h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+/* Grid flexível */
+.comodidades-condominio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+/* Card */
+.comodidade-condominio-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  padding: 24px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex: 1 1 480px;
+  max-width: 600px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.comodidade-condominio-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Imagem */
+.comodidade-condominio-img {
+  width: 160px;
+  height: 220px;
+  background-color: #eee;
+  border-radius: 16px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+/* Informações */
+.comodidade-condominio-info {
+  flex: 1;
+}
+
+.comodidade-condominio-info h3 {
+  color: #6c795f;
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.comodidade-condominio-info p {
+  color: #444;
+  font-size: 1rem;
+  margin: 2px 0;
+}
+
+.comodidade-condominio-info ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.comodidade-condominio-info li {
+  padding-left: 0;
+}
+
+/* Limpeza lista */
+.comodidade-card ul,
+.condominio-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.comodidade-card li,
+.condominio-section li {
+  padding-left: 0;
+}
+
+/* Responsivo Mobile */
+@media (max-width: 680px) {
+  .comodidade-condominio-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .comodidade-condominio-img {
+    width: 100%;
+    max-width: 240px;
+    height: 240px;
+    margin-bottom: 8px;
+  }
+
+  .comodidade-condominio-info {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+
+.faq-section {
+  max-width: 1100px;
+  margin: 18px auto 0 auto;
+  box-sizing: border-box;
+}
+
+.faq-section h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.faq-item {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  transition: box-shadow 0.3s;
+}
+
+.faq-item:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+.faq-item h3 {
+  margin: 0 0 10px 0;
+  color: #3f6650;
+  font-size: 1.2rem;
+}
+
+.faq-item p {
+  margin: 0;
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .faq-item {
+    padding: 16px 20px;
+  }
+}
+
+/* SECTION GERAL */
+.estacionamento-section {
+  padding: 64px 16px;
+}
+
+.estacionamento-section h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+  font-weight: 700;
+}
+
+/* GRID */
+.estacionamento-grid {
+  display: flex;
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* CARD */
+.estacionamento-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  padding: 24px 28px;
+  flex: 1 1 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.estacionamento-card:hover {
+  transform: translateY(-4px);
+}
+
+/* TÍTULO DO CARD */
+.estacionamento-card h3 {
+  font-size: 1.2rem;
+  color: #3f6650;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+/* TEXTO DO CARD */
+.estacionamento-card p {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* LISTAS */
+.estacionamento-card ul {
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+
+.estacionamento-card li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* LINKS */
+.estacionamento-card a {
+  color: #d08a6a;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.estacionamento-card a:hover {
+  border-color: #d08a6a;
+}
+
+/* Ajuste no grid para mobile */
+@media (max-width: 768px) {
+  .estacionamento-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .estacionamento-card {
+    flex: 1 1 100%;
+    padding: 20px;
+  }
+
+  .estacionamento-card h3 {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+}
+
+/* Extra para telas bem pequenas */
+@media (max-width: 500px) {
+  .estacionamento-section {
+    padding: 48px 12px;
+  }
+
+  .estacionamento-card {
+    padding: 18px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }
